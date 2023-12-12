@@ -1,8 +1,6 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+import { Model } from 'sequelize';
+export default (sequelize, DataTypes) => {
   class payment_method extends Model {
     /**
      * Helper method for defining associations.
@@ -17,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   payment_method.init({
     accountId: {
       type:DataTypes.INTEGER,
-      primaryKey:true
+      primaryKey:true,
+      autoIncrement:true,
     },
     payment_id: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,

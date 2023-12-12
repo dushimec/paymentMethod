@@ -1,8 +1,6 @@
 'use strict';
-const {
-  Model,DataTypes
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+import { Model, DataTypes } from 'sequelize';
+export default (sequelize, DataTypes) => {
   class payment_type extends Model {
     /**
      * Helper method for defining associations.
@@ -15,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   payment_type.init({
+    
     name: DataTypes.STRING,
     logo: DataTypes.STRING
   }, {
